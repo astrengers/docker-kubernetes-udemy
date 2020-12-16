@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t astrengers/docker-kubernetes-udemy -t Dockerfile.devs .
+  - docker build -t astrengers/docker-kubernetes-udemy -f Dockerfile.devs .
 
 script:
   - docker run -e CI=true astrengers/docker-kubernetes-udemy npm run test
